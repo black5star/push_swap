@@ -6,7 +6,7 @@
 /*   By: hboustaj <hboustaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 19:04:25 by hboustaj          #+#    #+#             */
-/*   Updated: 2024/06/01 12:21:02 by hboustaj         ###   ########.fr       */
+/*   Updated: 2024/06/02 10:55:46 by hboustaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ void	ft_read(t_list **stack_a, t_list **stack_b)
 	while (1)
 	{
 		str = get_next_line(0);
+		if (!str)
+			break ;
 		if (ft_execute(stack_a, stack_b, str))
 		{
 			free(str);
